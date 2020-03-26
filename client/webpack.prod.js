@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = merge(common, {
     mode: 'production',
@@ -24,5 +25,11 @@ module.exports = merge(common, {
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[id].[contenthash:8].css'
         }),
-    ]
+        // new BundleAnalyzerPlugin({ analyzerPort: 8919 })
+    ],
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.runtime.esm.js',
+        }
+    },
 });

@@ -52,8 +52,15 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env'],
-                        cacheDirectory: true
+                        presets: [
+                            [
+                              "@babel/preset-env",
+                              {
+                                useBuiltIns: "usage"
+                              }
+                            ]
+                          ],
+                          plugins: ["@babel/plugin-transform-runtime"]
                     }
                 }
             },
@@ -91,12 +98,6 @@ module.exports = {
             }
         ]
     },
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js',
-        }
-    },
-
     optimization: {
         splitChunks: {
             chunks: 'all'
