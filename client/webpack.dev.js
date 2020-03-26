@@ -31,9 +31,4 @@ module.exports = merge(common, {
             chunkFilename: 'css/[id].css'
         }),
     ],
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js',
-        }
-    },
 });

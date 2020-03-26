@@ -26,10 +26,5 @@ module.exports = merge(common, {
             chunkFilename: 'css/[id].[contenthash:8].css'
         }),
         // new BundleAnalyzerPlugin({ analyzerPort: 8919 })
-    ],
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.runtime.esm.js',
-        }
-    },
+    ]
 });
