@@ -87,6 +87,14 @@ module.exports = {
                 }
                 ]
             },
+           {
+                test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
+                loader: 'file-loader',
+                query: {
+                    name: '[name].[contenthash:8].[ext]',
+                    outputPath: 'images'
+                }
+            },
             {
                 test: /\.(htm|html)$/,
                 use: [

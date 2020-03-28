@@ -101,7 +101,7 @@ for (let i = 1; i < 141; i++) {
 }
 let avatarImgs = [];
 for (let i = 1; i <= 4; i++) {
-  avatarImgs.push(require(`./images/avatar/user${i}.jpg`));
+  avatarImgs.push(require('./images/avatar/user' + i + '.jpg'));
 }
 var socket = io("http://118.190.211.5:3000");
 

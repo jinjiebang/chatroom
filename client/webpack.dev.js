@@ -13,17 +13,6 @@ module.exports = merge(common, {
     devServer: {
         contentBase: __dirname + './dist',
     },
-    module: {
-        rules: [{
-            test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
-            loader: 'file-loader',
-            query: {
-                name: '[name].[ext]',
-                outputPath: 'images'
-            }
-        }
-        ]
-    },
     plugins:[
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({

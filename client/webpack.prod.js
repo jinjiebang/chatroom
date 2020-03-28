@@ -9,17 +9,6 @@ module.exports = merge(common, {
         filename: 'js/bundle.[contenthash:8].js',
         path: __dirname + '/dist'
     },
-    module: {
-        rules: [{
-            test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
-            loader: 'file-loader',
-            query: {
-                name: '[name].[contenthash:8].[ext]',
-                outputPath: 'images'
-            }
-        }
-        ]
-    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
