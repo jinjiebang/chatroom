@@ -22,7 +22,6 @@ const server = http.createServer(app);
 const io = socketIo(server);
 io.on('connection', socket => {
     console.log('a user connect');
-    console.log('a user connect2');
     let curUser: UserInfo
     io.emit(ChatRoomEvent.DisplayUser, userInfos);
     socket.on(ChatRoomEvent.Login, user => {

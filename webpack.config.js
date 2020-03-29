@@ -2,9 +2,6 @@ const nodeExternals = require('webpack-node-externals')
 module.exports = {
     mode: "development",
     devtool: "inline-source-map",
-    devServer: {
-        contentBase: __dirname + './dist',
-    },
     target: 'node',
     entry: {
         app: "./src/app.ts"
