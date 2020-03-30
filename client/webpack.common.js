@@ -114,9 +114,4 @@ module.exports = {
         runtimeChunk: true,
         moduleIds: 'hashed'
     },
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js',
-        }
-    },
 };
