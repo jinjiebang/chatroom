@@ -88,6 +88,7 @@
         </div>
       </div>
     </div>
+    <p> © 2020 <a href="http://www.potato865.cn" title="Potato"> Potato个人网站 </a> · <a href="http://beian.miit.gov.cn/" target="_blank" >闽ICP备19024599号</a> </p>
   </div>
 </template>
 
@@ -264,5 +265,13 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+p {
+  color: #fff;
+  text-align: center;
+}
+p a {
+  color: #fff;
+  text-decoration: none;
+}
 </style>
